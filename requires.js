@@ -32,7 +32,7 @@ export async function getCallRecordsOrTranscriptions() {
 }
 
 
-async function searchByName() {
+export async function searchByName() {
     fs.readFile("./PEOPLE.json","utf-8",(err,dataStr)=>{
         if (err) {
             console.log(err.message);
@@ -58,7 +58,7 @@ async function searchByName() {
 
 
 
-async function searchByAge() {
+export async function searchByAge() {
     fs.readFile("./PEOPLE.json","utf-8",(err,dataStr)=>{
         if (err) {
             console.log(err.message);
@@ -81,4 +81,8 @@ async function searchByAge() {
         };
     });
 };
-searchByName()
+
+export async function findDangerousPeople() {
+    
+}
+
